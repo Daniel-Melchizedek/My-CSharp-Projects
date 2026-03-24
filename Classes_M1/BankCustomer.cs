@@ -5,8 +5,9 @@ namespace Classes_M1;
 public class BankCustomer
 {
     private static int s_nextCustomerId;
-    
-    public string FirstName = "Tim";
+
+    private string field;
+    public string FirstName {get => field ?? "NA"; set => field=value;}
     public string LastName = "Shao";
     public readonly string CustomerId;
 
@@ -18,6 +19,7 @@ public class BankCustomer
 
     public BankCustomer()
     {
+        field = "Headset";
         this.CustomerId = (s_nextCustomerId++).ToString("D10");
     }
     public BankCustomer(string firstName, string lastName):this()

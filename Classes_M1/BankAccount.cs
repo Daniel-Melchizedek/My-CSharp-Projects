@@ -4,7 +4,8 @@ namespace Classes_M1;
 
 public class BankAccount
 {
-    public int AccountNumber;
+
+    public int AccountNumber {get; set=> field = value;}
     public double Balance = 0;
     public static double InterestRate;
     public string AccountType = "Checking";
